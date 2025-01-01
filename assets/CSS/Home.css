@@ -148,6 +148,10 @@
     cursor: pointer;
   }
 
+  .header{
+    position: static;
+  }
+
   .overlay {
     position: absolute;
     top: -650px;
@@ -188,6 +192,9 @@
     display: block;
     font-size: var(--Font-h4);
     cursor: pointer;
+  }
+  .header{
+    position: static;
   }
 
   .overlay {
