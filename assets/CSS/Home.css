@@ -1,12 +1,21 @@
 /* ================= Navbar Section ================= */
 .header {
-  padding: 60px 0;
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
 }
+
+.header.scrolled{
+    /* border-bottom: 1px solid ba ; */
+    padding-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+} 
 
 .navbar-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 30px 0 0;
 }
 
 .nav-logo {
@@ -14,159 +23,206 @@
   max-width: 220px;
 }
 
-.navbar-list{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.navbar-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.navbar-item{
-    padding: 0 20px;
+.navbar-item {
+  padding: 0 20px;
 }
 
-.navbar-link{
-    position: relative;
-    font-size: var(--Font-h4);
-    font-weight: 400;
-    color: #000000;
-    transition: all 0.3s ease-in-out;
+.navbar-link {
+  position: relative;
+  font-size: var(--Font-h4);
+  font-weight: 400;
+  color: #000000;
+  transition: all 0.3s ease-in-out;
 }
-.navbar-link:hover{
-    color: #000000;
-}
-
-.navbar-link::before{
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 0%;
-    height: 2.2px;
-    background-color: var(--Primary-color);
-    transition: all 0.5s ease-in-out;
+.navbar-link:hover {
+  color: #000000;
 }
 
-.navbar-item:hover .navbar-link::before{
+.navbar-link::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0%;
+  height: 2.2px;
+  background-color: var(--Primary-color);
+  transition: all 0.5s ease-in-out;
+}
+
+.navbar-item:hover .navbar-link::before {
+  width: 100%;
+}
+
+.menu-icon,
+.close-icon {
+  display: none;
+}
+
+/* ================= HERO Section ================= */
+
+.hero-section {
+  padding: 70px 0;
+}
+
+.hero-left-side {
+  max-width: 531px;
+}
+
+.hero-section-title {
+  font-size: var(--Font-h1);
+  color: #000000;
+  margin: 0;
+}
+
+.hero-section-text {
+  font-size: 20px;
+  font-weight: 400;
+  color: #000000;
+  margin: 33px 0;
+  margin-right: 33px;
+}
+
+.hero-btn{
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.hero-img{
     width: 100%;
+    max-width: 600px;
 }
 
-.menu-icon,.close-icon{
-    display: none;
+/* ================= HERO SLIDER Section ================= */
+
+.slider-section{
+    margin-bottom: 140px;
+}
+.slider-img{
+    width: 100%;
+    max-width: 124px;
+    height: 48px;
 }
 
-@media (min-width:1200px) and (max-width:1399px){
-    .navbar-item{
-        padding: 0 15px;
-    }
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .navbar-item {
+    padding: 0 15px;
+  }
 }
-@media (min-width:1025px) and (max-width:1199px){
-    .nav-logo {
-        max-width: 180px;
-      }
-    .navbar-item{
-        padding: 0 10px;
-    }
-    .navbar-link{
-        font-size: var(--Font-P);
-    }
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .nav-logo {
+    max-width: 180px;
+  }
+  .navbar-item {
+    padding: 0 10px;
+  }
+  .navbar-link {
+    font-size: var(--Font-P);
+  }
 }
-@media (max-width:1024px){
-    .nav-logo {
-        max-width: 180px;
-      }
-    .navbar-item{
-        padding: 0 10px;
-    }
-    .navbar-link{
-        font-size: var(--Font-P);
-    }
-   
+@media (max-width: 1024px) {
+  .nav-logo {
+    max-width: 180px;
+  }
+  .navbar-item {
+    padding: 0 10px;
+  }
+  .navbar-link {
+    font-size: var(--Font-P);
+  }
 }
-@media (min-width:769px) and (max-width:992px){
-    .menu-icon,.close-icon{
-        display: block;
-        font-size: var(--Font-h4);
-        cursor: pointer;
-    }
+@media (min-width: 769px) and (max-width: 992px) {
+  .menu-icon,
+  .close-icon {
+    display: block;
+    font-size: var(--Font-h4);
+    cursor: pointer;
+  }
 
-    .overlay{
-        position: absolute;
-        top: -650px;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: var(--Dark-color);
-        transition: all 0.5s ease-in-out;
-    }
+  .overlay {
+    position: absolute;
+    top: -650px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--Dark-color);
+    transition: all 0.5s ease-in-out;
+  }
 
-    .overlay.active{
-        top: 0;
-    }
+  .overlay.active {
+    top: 0;
+  }
 
-    .navbar-list{
-        height: 100%;
-        flex-direction: column;
-    }
+  .navbar-list {
+    height: 100%;
+    flex-direction: column;
+  }
 
-    .navbar-item{
-        padding: 15px 0;
-    }
+  .navbar-item {
+    padding: 15px 0;
+  }
 
-    .navbar-link{
-        color: var(--light-color);
-    }
+  .navbar-link {
+    color: var(--light-color);
+  }
 
-    .close-icon{
-        position: absolute;
-        top: 30px;
-        right: 30px;
-        color: var(--light-color);
-    }
-
+  .close-icon {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: var(--light-color);
+  }
 }
-@media (max-width:768px){
-    .menu-icon,.close-icon{
-        display: block;
-        font-size: var(--Font-h4);
-        cursor: pointer;
-    }
+@media (max-width: 768px) {
+  .menu-icon,
+  .close-icon {
+    display: block;
+    font-size: var(--Font-h4);
+    cursor: pointer;
+  }
 
-    .overlay{
-        position: absolute;
-        top: -650px;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: var(--Dark-color);
-        transition: all 0.5s ease-in-out;
-    }
+  .overlay {
+    position: absolute;
+    top: -650px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--Dark-color);
+    transition: all 0.5s ease-in-out;
+  }
 
-    .overlay.active{
-        top: 0;
-    }
+  .overlay.active {
+    top: 0;
+  }
 
-    .navbar-list{
-        height: 100%;
-        flex-direction: column;
-    }
+  .navbar-list {
+    height: 100%;
+    flex-direction: column;
+  }
 
-    .navbar-item{
-        padding: 15px 0;
-    }
+  .navbar-item {
+    padding: 15px 0;
+  }
 
-    .navbar-link{
-        color: var(--light-color);
-    }
+  .navbar-link {
+    color: var(--light-color);
+  }
 
-    .close-icon{
-        position: absolute;
-        top: 30px;
-        right: 30px;
-        color: var(--light-color);
-    }
-
+  .close-icon {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: var(--light-color);
+  }
 }
-@media (max-width:575px){}
+@media (max-width: 575px) {
+}
