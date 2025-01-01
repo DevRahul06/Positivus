@@ -1,0 +1,20 @@
+/* ================= Root Variables ================= */
+
+:root {
+  /* ================= Fonts Variables ================= */
+
+  /* ***** Font-Famliy ***** */
+  --Space-Grotesk: "Space Grotesk";
+  /* ***** Font-size ***** */
+  --Font-h1: 60px;
+  --Font-h2: 40px;
+  --Font-h3: 30px;
+  --Font-h4: 20px;
+  --Font-P: 18px;
+
+  /* ================= Color Variables ================= */
+
+  --Primary-color: #b9ff66;
+  --Dark-color: #191a23;
+  --light-color: #f3f3f3;
+}

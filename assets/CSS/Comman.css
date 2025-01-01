@@ -1,0 +1,48 @@
+.comman-btn{
+    border: 1px solid var(--Dark-color);
+    padding: 20px 35px;
+    font-size: var(--Font-h4);
+    color: #000000;
+    border-radius: 14px;
+    transition: all 0.5s ease-in-out;
+}
+
+.comman-btn:hover{
+    background-color: var(--Primary-color);
+    border-color: transparent;
+    color: var(--Dark-color);
+}
+
+
+@media (min-width:1200px) and (max-width:1399px){
+   .comman-btn{
+    padding: 16px 28px;
+   }
+}
+@media (min-width:1025px) and (max-width:1199px){
+    .comman-btn{
+        padding: 16px 20px;
+        font-size: var(-Font-P);
+       }
+}
+@media (max-width:1024px){
+    .comman-btn{
+        padding: 16px 20px;
+        font-size: var(-Font-P);
+       }
+}
+@media (min-width:769px) and (max-width:991px){
+    .comman-btn{
+        color: var(--light-color);
+        border-color: var(--Primary-color);
+        font-size: var(--Font-P);
+    }
+}
+@media (max-width:768px){
+    .comman-btn{
+        color: var(--light-color);
+        border-color: var(--Primary-color);
+        font-size: var(--Font-P);
+    }
+}
+@media (max-width:575px){}
